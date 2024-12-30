@@ -1,0 +1,120 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: #242424;
+            color: #fff;
+            padding: 5% 10%;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #ffad41;
+            font-size: 3em;
+            margin: 40px 0 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: #ffad41;
+        }
+
+        .skills-container {
+            background: rgba(255, 173, 65, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .skill-category {
+            margin: 15px 0;
+        }
+
+        .skill-title {
+            color: #ffad41;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-right: 10px;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .skill-list {
+            color: #fff;
+            display: inline;
+        }
+
+        .experience-card {
+            background: rgba(255, 173, 65, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 173, 65, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .experience-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 173, 65, 0.1);
+        }
+
+        .company-name {
+            color: #ffad41;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            color: #acabab;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .duration-location {
+            color: #acabab;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 173, 65, 0.2);
+        }
+
+        .responsibility {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .responsibility::before {
+            content: '•';
+            color: #ffad41;
+            position: absolute;
+            left: 0;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 5%;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .skill-title {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+   

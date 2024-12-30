@@ -1,0 +1,179 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(36, 36, 36, 0.95);
+            padding: 20px 40px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 173, 65, 0.2);
+        }
+
+        .logo {
+            color: #ffad41;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #ffad41;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #ffad41;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Existing Styles */
+        .main-content {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .left-section {
+            width: 70%;
+            min-height: 100vh;
+            background: #242424;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 5%;
+            color: #ffad41;
+        }
+
+        .right-section {
+            width: 45%;
+            min-height: 100vh;
+            background: #ffad41;
+        }
+
+        .wave-shape {
+            position: absolute;
+            height: 100%;
+            width: 200px;
+            right: -100px;
+            top: 0;
+            background: #242424;
+            clip-path: path('M 0 0 L 200 0 Q 100 500 200 1000 L 0 1000 Z');
+        }
+
+        .home-container {
+            z-index: 1;
+            margin-top: 60px; /* Added to account for fixed navbar */
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #acabab;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1em;
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: white;
+            color: black;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(36, 36, 36, 0.95);
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .left-section {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .right-section, .wave-shape {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+        }
